@@ -1,0 +1,42 @@
+{
+  // 格式化工具
+  "editor.formatOnSave": true, // 儲存時自動格式化
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // 使用 Prettier
+
+  // TypeScript 建議
+  "typescript.tsdk": "node_modules/typescript/lib", // 使用專案本地的 TypeScript
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  // 自動補全
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+
+  // 自動匯入路徑格式（避免相對路徑太亂）
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+
+  // 路徑別名（配合 tsconfig 設定）
+  "path-intellisense.mappings": {
+    "@": "${workspaceRoot}/src"
+  },
+
+  // ESLint 整合（需安裝 eslint 套件）
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // UI 習慣
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/build": true,
+    "**/dist": true
+  },
+  "explorer.confirmDelete": false, // 刪除時不彈出確認
+  "explorer.confirmDragAndDrop": false
+}
